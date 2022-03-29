@@ -1,0 +1,19 @@
+﻿@model List<Linea>
+
+<h1>Lineas FLA </h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var linea in Model) { 
+        <tr>
+            <td> @Html.DisplayFor(m => linea.Nombre)</td>
+        </tr>
+        }
+    </tbody>
+
+
+</table>

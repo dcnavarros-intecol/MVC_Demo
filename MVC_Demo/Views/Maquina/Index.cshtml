@@ -1,0 +1,34 @@
+﻿@model List<MVC_Demo.Models.Maquina>
+
+
+<h1>Maquinas </h1>
+<p>
+    <a asp-action ="Create">crear</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Linea </th>
+            <th>Maquina </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var maquina in Model)
+        {
+            @foreach (var maq in maquina.Referencia)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(m => maquina.Nombre)</td>
+                    <td> @Html.DisplayFor(m => maq.Nombre)</td>
+
+                </tr>
+            }
+
+
+
+
+        }
+    </tbody>
+
+
+</table>
